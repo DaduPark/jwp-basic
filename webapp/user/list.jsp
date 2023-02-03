@@ -25,7 +25,11 @@
                         <td>${user.userId}</td>
                         <td>${user.name}</td>
                         <td>${user.email}</td>
-                        <td><a href="/user/update?userId=${user.userId}" class="btn btn-success" role="button">수정</a>
+                        <td>
+                        <c:if test="${sessionScope.user.userId == user.userId}">
+                        	<a href="/user/update?userId=${user.userId}" class="btn btn-success" role="button">수정
+                        </c:if>
+                        </a>
                         </td>
                     </tr>
                 </c:forEach>

@@ -28,7 +28,9 @@
                   <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
                 </ul>
              </li>
+             <c:if test="${not empty sessionScope.user}">
              <li><a href="/user/list"><i class="glyphicon glyphicon-user"></i></a></li>
+             </c:if>
            </ul>
         </div>	
      </div>	
